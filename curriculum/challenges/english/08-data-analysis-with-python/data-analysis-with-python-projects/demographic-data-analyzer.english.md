@@ -1,7 +1,7 @@
 ---
 id: 5e46f7e5ac417301a38fb929
 title: Demographic Data Analyzer
-challengeType: 4
+challengeType: 10
 isRequired: true
 ---
 

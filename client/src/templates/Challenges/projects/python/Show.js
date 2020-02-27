@@ -35,7 +35,7 @@ import { ChallengeNode } from '../../../../redux/propTypes';
 import { isSignedInSelector } from '../../../../redux';
 import Hotkeys from '../../components/Hotkeys';
 
-import { backend } from '../../../../../utils/challengeTypes';
+import { python } from '../../../../../utils/challengeTypes';
 
 import '../../components/test-frame.css';
 
@@ -94,7 +94,7 @@ const options = {
   }
 };
 
-export class BackEnd extends Component {
+export class Python extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -185,6 +185,13 @@ export class BackEnd extends Component {
       : "I've completed this challenge";
     const blockNameTitle = `${blockName} - ${title}`;
 
+    let placeholder = 'https://repl.it/camperbot/solution';
+
+    if (description.includes('Colaboratory')) {
+      placeholder =
+        'https://colab.research.google.com/drive/1UCHiRuBLxo013aMuiDXlaP54LsxzrXH3';
+    }
+
     return (
       <Hotkeys
         innerRef={c => (this._container = c)}
@@ -203,7 +210,7 @@ export class BackEnd extends Component {
                   description={description}
                   instructions={instructions}
                 />
-                {challengeType === backend ? (
+                {challengeType === python ? (
                   <Form
                     buttonText={`${buttonCopy}`}
                     formFields={formFields}
@@ -215,7 +222,7 @@ export class BackEnd extends Component {
                   <ProjectForm
                     isFrontEnd={false}
                     onSubmit={executeChallenge}
-                    placeholder='https://camperbot.glitch.me'
+                    placeholder={placeholder}
                     updateProjectForm={updateProjectFormValues}
                   />
                 )}
@@ -247,16 +254,16 @@ export class BackEnd extends Component {
   }
 }
 
-BackEnd.displayName = 'BackEnd';
-BackEnd.propTypes = propTypes;
+Python.displayName = 'Python';
+Python.propTypes = propTypes;
 
 export default connect(
   mapStateToProps,
   mapDispatchToActions
-)(BackEnd);
+)(Python);
 
 export const query = graphql`
-  query BackendChallenge($slug: String!) {
+  query PythonChallenge($slug: String!) {
     challengeNode(fields: { slug: { eq: $slug } }) {
       forumTopicId
       title

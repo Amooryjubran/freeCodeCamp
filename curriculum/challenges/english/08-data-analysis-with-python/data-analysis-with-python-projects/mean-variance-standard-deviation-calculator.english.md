@@ -1,7 +1,7 @@
 ---
 id: 5e46f7e5ac417301a38fb928
 title: Mean-Variance-Standard Deviation Calculator
-challengeType: 4
+challengeType: 10
 isRequired: true
 ---
 

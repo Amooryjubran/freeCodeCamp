@@ -223,6 +223,14 @@ export const challengeDataSelector = state => {
       ...challengeData,
       ...projectFormValuesSelector(state)
     };
+  } else if (challengeType === challengeTypes.pythonProject) {
+    const values = projectFormValuesSelector(state);
+    const { solution: url } = values;
+    challengeData = {
+      ...challengeData,
+      ...values,
+      url
+    };
   } else if (
     challengeType === challengeTypes.html ||
     challengeType === challengeTypes.modern

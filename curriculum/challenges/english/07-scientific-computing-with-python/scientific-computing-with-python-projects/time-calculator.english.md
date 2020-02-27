@@ -1,7 +1,7 @@
 ---
 id: 5e444136903586ffb414c94d
 title: Time Calculator
-challengeType: 4
+challengeType: 10
 isRequired: true
 ---
 

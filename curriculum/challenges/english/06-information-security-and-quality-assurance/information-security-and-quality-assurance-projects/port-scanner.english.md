@@ -1,7 +1,7 @@
 ---
 id: 5e46f979ac417301a38fb932
 title: Port Scanner
-challengeType: 4
+challengeType: 10
 isRequired: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: 5e44414f903586ffb414c950
 title: Probability Calculator
-challengeType: 4
+challengeType: 10
 isRequired: true
 ---
 

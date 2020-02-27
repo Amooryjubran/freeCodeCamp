@@ -9,11 +9,13 @@ const modern = 6;
 const step = 7;
 const quiz = 8;
 const invalid = 9;
+const pythonProject = 10;
 
 // individual exports
 exports.backend = backend;
 exports.frontEndProject = frontEndProject;
 exports.backEndProject = backEndProject;
+exports.pythonProject = pythonProject;
 
 exports.challengeTypes = {
   html,
@@ -22,6 +24,7 @@ exports.challengeTypes = {
   zipline,
   frontEndProject,
   backEndProject,
+  pythonProject,
   bonfire,
   modern,
   step,
@@ -42,6 +45,7 @@ exports.viewTypes = {
   [bonfire]: 'classic',
   [frontEndProject]: 'frontend',
   [backEndProject]: 'backend',
+  [pythonProject]: 'python',
   [modern]: 'modern',
   [step]: 'step',
   [quiz]: 'quiz',
@@ -60,7 +64,7 @@ exports.submitTypes = {
   // a hosted URL where the app is running live
   // project code url like GitHub
   [backEndProject]: 'project.backEnd',
-
+  [pythonProject]: 'project.backEnd',
   [step]: 'step',
   [quiz]: 'quiz',
   [backend]: 'backend',
