@@ -19,10 +19,6 @@ const intro = path.resolve(
   __dirname,
   '../../src/templates/Introduction/Intro.js'
 );
-const python = path.resolve(
-  __dirname,
-  '../../src/templates/Challenges/projects/python/Show.js'
-);
 const superBlockIntro = path.resolve(
   __dirname,
   '../../src/templates/Introduction/SuperBlockIntro.js'
@@ -32,8 +28,7 @@ const views = {
   backend,
   classic,
   modern: classic,
-  frontend,
-  python
+  frontend
   // quiz: Quiz
 };
 

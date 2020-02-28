@@ -210,7 +210,10 @@ export const challengeDataSelector = state => {
       ...challengeData,
       url
     };
-  } else if (challengeType === challengeTypes.backEndProject) {
+  } else if (
+    challengeType === challengeTypes.backEndProject ||
+    challengeType === challengeTypes.pythonProject
+  ) {
     const values = projectFormValuesSelector(state);
     const { solution: url } = values;
     challengeData = {
@@ -222,14 +225,6 @@ export const challengeDataSelector = state => {
     challengeData = {
       ...challengeData,
       ...projectFormValuesSelector(state)
-    };
-  } else if (challengeType === challengeTypes.pythonProject) {
-    const values = projectFormValuesSelector(state);
-    const { solution: url } = values;
-    challengeData = {
-      ...challengeData,
-      ...values,
-      url
     };
   } else if (
     challengeType === challengeTypes.html ||

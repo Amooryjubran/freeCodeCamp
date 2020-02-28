@@ -45,7 +45,7 @@ exports.viewTypes = {
   [bonfire]: 'classic',
   [frontEndProject]: 'frontend',
   [backEndProject]: 'backend',
-  [pythonProject]: 'python',
+  [pythonProject]: 'backend',
   [modern]: 'modern',
   [step]: 'step',
   [quiz]: 'quiz',

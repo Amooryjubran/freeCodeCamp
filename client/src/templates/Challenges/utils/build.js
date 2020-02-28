@@ -69,7 +69,7 @@ const buildFunctions = {
   [challengeTypes.modern]: buildDOMChallenge,
   [challengeTypes.backend]: buildBackendChallenge,
   [challengeTypes.backEndProject]: buildBackendChallenge,
-  [challengeTypes.pythonProject]: buildPythonChallenge
+  [challengeTypes.pythonProject]: buildBackendChallenge
 };
 
 export function canBuildChallenge(challengeData) {
@@ -162,14 +162,6 @@ export function buildJSChallenge({ files }, options) {
 export function buildBackendChallenge({ url }) {
   return {
     challengeType: challengeTypes.backend,
-    build: concatHtml({ required: frameRunner }),
-    sources: { url }
-  };
-}
-
-export function buildPythonChallenge({ url }) {
-  return {
-    challengeType: challengeTypes.pythonProject,
     build: concatHtml({ required: frameRunner }),
     sources: { url }
   };

@@ -121,8 +121,7 @@ const submitters = {
   tests: submitModern,
   backend: submitBackendChallenge,
   'project.frontEnd': submitProject,
-  'project.backEnd': submitProject,
-  'project.python': submitProject
+  'project.backEnd': submitProject
 };
 
 export default function completionEpic(action$, state$) {
