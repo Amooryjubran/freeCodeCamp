@@ -89,7 +89,8 @@ export async function buildChallenge(challengeData, options) {
 const testRunners = {
   [challengeTypes.js]: getJSTestRunner,
   [challengeTypes.html]: getDOMTestRunner,
-  [challengeTypes.backend]: getDOMTestRunner
+  [challengeTypes.backend]: getDOMTestRunner,
+  [challengeTypes.pythonProject]: getDOMTestRunner
 };
 export function getTestRunner(buildData, { proxyLogger }, document) {
   const { challengeType } = buildData;
